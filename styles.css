@@ -78,3 +78,7 @@
 @media(max-width:1050px){.planner-form{grid-template-columns:minmax(170px,1fr) repeat(4,minmax(92px,120px)) 43px}.week-grid{gap:6px}.day-column{padding:10px 7px}}
 @media(max-width:850px){.planner-form{grid-template-columns:minmax(0,1fr) repeat(4,minmax(95px,1fr)) 43px}.planner-form .field:first-child{grid-column:1/-1}.week-check-head{align-items:flex-start;flex-direction:column}.week-grid{grid-template-columns:repeat(4,1fr)}}
 @media(max-width:620px){.planner-form{grid-template-columns:1fr 1fr;gap:10px}.planner-form .field:first-child{grid-column:1/-1}.planner-form .field-category,.planner-form .field-duration,.planner-form .field-day,.planner-form .field-flex{grid-column:auto;grid-row:auto}.planner-form .add-button{grid-column:1/-1;grid-row:auto;height:42px}.week-check{padding:16px 13px}.week-actions{width:100%}.planner-tool{flex:1;padding:9px 7px;font-size:9px}.balance-stats{gap:5px}.balance-stat{padding:4px 6px}.balance-stat span{font-size:7px}.balance-stat strong{font-size:12px}.week-grid{grid-template-columns:repeat(2,1fr)}.day-column:last-child{grid-column:1/-1}}
+.video-thumb{cursor:pointer;color:var(--ink);transition:filter .18s ease}
+.video-thumb:hover{filter:saturate(1.08)}
+.video-thumb:hover .play-button{transform:scale(1.08);background:#ffbb00}
+.video-thumb:focus-visible{outline:3px solid #003b71;outline-offset:3px;z-index:3}
