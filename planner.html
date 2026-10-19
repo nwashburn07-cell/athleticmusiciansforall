@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#003b71">
+<meta name="description" content="A flexible week planner for students balancing sports, music, school, and rest.">
+<title>Build your week | In the Mix</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+<header class="topbar">
+<a class="brand" href="index.html" aria-label="In the Mix home">
+<svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+<rect x="2" y="2" width="36" height="36" rx="12" fill="currentColor"/>
+<path d="M10 22h3l2.5-7 4 13 3.5-10 2 4h5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="30.5" cy="12" r="3.5" fill="#ffbb00"/>
+</svg> in the mix</a>
+<nav aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="planner.html" aria-current="page">Build your week</a>
+<a href="reset.html">Reset</a>
+<a href="resources.html">Resources</a>
+</nav>
+<a class="nav-cta" href="planner.html">Make a plan <span>↗</span>
+</a>
+</header>
+<main>
+<section class="planner-section" id="planner">
+<div class="planner-heading">
+<div>
+<div class="section-kicker light-kicker">
+<span>02</span> YOUR WEEK, YOUR WAY</div>
+<h2>Make a week<br>that <em>fits.</em>
+</h2>
+</div>
+<p>Lay in your fixed commitments, estimate the time each task needs, and use the balance check to spot where your week may be getting tight.</p>
+</div>
+<div class="planner-card">
+<div class="planner-top">
+<div>
+<span class="step-label">A PLAN WITH ROOM TO BREATHE</span>
+<h3>Build your weekly rhythm</h3>
+</div>
+<span class="week-badge">✳ &nbsp; YOUR WEEKLY MAP</span>
+</div>
+<div class="planner-form">
+<label class="field">
+<span>THING TO DO</span>
+<input id="taskInput" type="text" placeholder="e.g. Chemistry review, piano scales…" maxlength="70">
+</label>
+<label class="field field-category">
+<span>IT’S FOR</span>
+<select id="categoryInput">
+<option value="school">📚 School</option>
+<option value="music">🎵 Music</option>
+<option value="sport">🏃 Sport</option>
+<option value="life">🌿 Life / rest</option>
+</select>
+</label>
+<label class="field field-duration">
+<span>HOW LONG</span>
+<select id="durationInput">
+<option value="0.25">15 min</option>
+<option value="0.5">30 min</option>
+<option value="0.75">45 min</option>
+<option value="1" selected>1 hour</option>
+<option value="1.5">1.5 hours</option>
+<option value="2">2 hours</option>
+</select>
+</label>
+<label class="field field-day">
+<span>WHEN</span>
+<select id="dayInput">
+<option>Monday</option>
+<option>Tuesday</option>
+<option>Wednesday</option>
+<option>Thursday</option>
+<option>Friday</option>
+<option>Saturday</option>
+<option>Sunday</option>
+</select>
+</label>
+<label class="field field-flex">
+<span>THIS ONE IS</span>
+<select id="flexInput">
+<option value="fixed">Fixed</option>
+<option value="flexible" selected>Flexible</option>
+</select>
+</label>
+<button class="add-button" id="addTask" type="button" aria-label="Add task">+</button>
+</div>
+<div class="planner-hint">
+<span>↳</span> Add practices, classes, and rehearsals as fixed anchors. Mark movable tasks flexible so the balance helper can make room for them.</div>
+<section class="week-check" aria-labelledby="weekCheckTitle">
+<div class="week-check-head">
+<div>
+<span class="step-label">YOUR WEEK AT A GLANCE</span>
+<h4 id="weekCheckTitle">The balance check</h4>
+</div>
+<div class="week-actions">
+<button id="addReset" type="button" class="planner-tool">+ Add a 15-minute reset</button>
+<button id="rebalancePlan" type="button" class="planner-tool planner-tool-strong">↔ Make more room</button>
+</div>
+</div>
+<div class="balance-stats">
+<div class="balance-stat">
+<span>PLANNED TIME</span>
+<strong id="plannedHours">0 hrs</strong>
+</div>
+<div class="balance-stat">
+<span>BUSIEST DAY</span>
+<strong id="busyDay">—</strong>
+</div>
+<div class="balance-stat">
+<span>REST MOMENTS</span>
+<strong id="restCount">0</strong>
+</div>
+</div>
+<div class="load-track" role="img" aria-label="Weekly planned time">
+<span id="loadFill">
+</span>
+</div>
+<p id="balanceMessage" class="balance-message" aria-live="polite">Add a few anchors to see how your week is shaping up.</p>
+</section>
+<div class="week-grid" id="weekGrid" aria-live="polite">
+</div>
+<div class="planner-footer">
+<span id="taskCount">YOUR PLAN, YOUR CALL.</span>
+<button id="clearPlan" type="button" class="clear-button">Clear plan ↗</button>
+</div>
+</div>
+<div class="planner-bottom">
+<span>GOOD PLANS BEND. THEY DON’T BREAK.</span>
+<span>Take a breath. You’re doing a lot. ✳</span>
+</div>
+</section>
+</main>
+<footer>
+<a class="brand" href="index.html" aria-label="In the Mix home">
+<svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+<rect x="2" y="2" width="36" height="36" rx="12" fill="currentColor"/>
+<path d="M10 22h3l2.5-7 4 13 3.5-10 2 4h5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="30.5" cy="12" r="3.5" fill="#ffbb00"/>
+</svg> in the mix</a>
+<span>For every student who does a little bit of everything.</span>
+<a href="#top">BACK TO TOP ↑</a>
+</footer>
+<script src="script.js">
+</script>
+</body>
+</html>
